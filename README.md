@@ -32,22 +32,18 @@ npm run start
 ## Project Structure
 
 ```
-app/                        # Route entry points and global styles
+app/
   page.tsx                  # Overview dashboard (event grid, stats, search, filters)
   layout.tsx                # Root layout with EventsProvider
   globals.css               # All styles
   events/
     [eventId]/page.tsx      # Event detail / control room
-    create/page.tsx         # (reserved)
 
 components/
+  StatusBadge.tsx           # Lifecycle status pill
   event/
     EventCard.tsx           # Grid card with readiness indicator and blocked hint
     CreateEventModal.tsx    # New event form
-  ui/
-    Button.tsx
-    Card.tsx
-    StatusBadge.tsx         # Lifecycle status pill
 
 lib/
   types.ts                  # Domain types: LivEvent, EventStatus, ReadinessKey
